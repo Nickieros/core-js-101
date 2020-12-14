@@ -267,10 +267,10 @@ function getSecondItems(arr) {
  *  [ 'a', 'b', 'c', null ] => [ 'a', 'b','b', 'c','c','c',  null,null,null,null ]
  *  [ 1,2,3,4,5 ] => [ 1, 2,2, 3,3,3, 4,4,4,4, 5,5,5,5,5 ]
  */
-function propagateItemsByPositionIndex(/* arr */) {
-  throw new Error('Not implemented');
+function propagateItemsByPositionIndex(arr) {
+  // eslint-disable-next-line no-sequences
+  return arr.reduce((a, v, i) => { a.push(...new Array(i + 1).fill(v)); return a; }, []);
 }
-
 
 /**
  * Returns the 3 largest numbers from the specified array
