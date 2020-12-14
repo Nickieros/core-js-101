@@ -418,8 +418,9 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  *    ]
  */
-function sortCitiesArray(/* arr */) {
-  throw new Error('Not implemented');
+function sortCitiesArray(arr) {
+  // eslint-disable-next-line no-nested-ternary,max-len
+  return arr.sort((a, b) => (a.country === b.country ? a.city > b.city ? 1 : -1 : a.country > b.country ? 1 : -1));
 }
 
 /**
@@ -440,8 +441,10 @@ function sortCitiesArray(/* arr */) {
  *           [0,0,0,1,0],
  *           [0,0,0,0,1]]
  */
-function getIdentityMatrix(/* n */) {
-  throw new Error('Not implemented');
+function getIdentityMatrix(n) {
+  return [...new Array(n)]
+    .map((v1, i1) => [...new Array(n)]
+      .map((v2, i2) => (i1 === i2 ? 1 : 0)));
 }
 
 /**
