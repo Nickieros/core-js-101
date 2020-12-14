@@ -304,8 +304,7 @@ function get3TopItems(arr) {
  *   [ 1, '2' ] => 1
  */
 function getPositivesCount(arr) {
-  // eslint-disable-next-line no-return-assign,no-param-reassign
-  return arr.reduce((acc, val) => acc += typeof val === 'number' && val > 0 ? 1 : 0, 0);
+  return arr.reduce((acc, val) => (typeof val === 'number' && val > 0 ? acc + 1 : acc), 0);
 }
 
 /**
@@ -340,7 +339,7 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
 function getItemsSum(arr) {
-  return arr.reduce((acc, val) => acc + val);
+  return arr.reduce((acc, val) => acc + val, 0);
 }
 
 /**
