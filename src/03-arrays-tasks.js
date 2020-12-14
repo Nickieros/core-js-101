@@ -36,8 +36,7 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  // eslint-disable-next-line no-plusplus,no-param-reassign
-  return [1, ...[...new Array(len)].filter((v, i) => !((i + 1) % 2))];
+  return [...new Array(len)].map((v, i) => i * 2 + 1);
 }
 
 
