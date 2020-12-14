@@ -346,7 +346,7 @@ function getItemsSum(arr) {
  * Returns the number of all falsy value in the specified array
  *
  * @param {array} arr
- * @return {array}
+ * @return {number}
  *
  * @example
  *  [] => 0
@@ -354,12 +354,12 @@ function getItemsSum(arr) {
  *  [ -1, 'false', null, 0 ] => 2
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
-function getFalsyValuesCount(/* arr */) {
-  throw new Error('Not implemented');
+function getFalsyValuesCount(arr) {
+  return arr.filter((val) => !val).length;
 }
 
 /**
- * Returns a number of all occurences of the specified item in an array
+ * Returns a number of all occurrences of the specified item in an array
  *
  * @param {array} arr
  * @param {any} item
@@ -372,8 +372,8 @@ function getFalsyValuesCount(/* arr */) {
  *    [ null, undefined, null ], null => 2
  *    [ true, 0, 1, 'true' ], true => 1
  */
-function findAllOccurences(/* arr, item */) {
-  throw new Error('Not implemented');
+function findAllOccurences(arr, item) {
+  return arr.filter((val) => item === val).length;
 }
 
 /**
